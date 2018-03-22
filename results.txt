@@ -1,0 +1,203 @@
+The metabolism of Cephalexin can be decreased when combined with Methadone. Drug-Bank | https://www.drugbank.ca/drugs/DB00333
+There were no interactions found in our database between cephalexin and methadone - Drugs.com | https://www.drugs.com/drug-interactions/cephalexin-with-methadone-564-0-1578-0.html
+
+-i "./Datasets/IMDB/DB_BK_IMDB.txt" -f "./Datasets/IMDB/train1/train1_facts.txt" -dt hsqldb -allowRecursion true -o "./Datasets/IMDB/"
+-l -train ./data/UW-CSE-NEW/train -model ./data/UW-CSE-NEW/models -i -test ./data/UW-CSE-NEW/test -mln -aucJarPath ./ -trees 20 -target advisedby -approxCount
+-l -train ./data/Cora/train -model ./data/Cora/models -i -test ./data/Cora/test -mln -aucJarPath ./ -trees 20 -target sameauthor -approxCount
+
+-l -train ./data/IMDB/train -model ./data/IMDB/models -i -test ./data/IMDB/test -mln -aucJarPath ./ -trees 20 -target advisedby -approxCount
+
+-l -train ./data/Citeseer/train -model ./data/Citeseer/models -i -test ./data/Citeseer/test -mln -aucJarPath ./ -trees 20 -target infield_fauthor -approxCount
+
+-l -train ./data/WebKB/train -model ./data/WebKB/models -i -test ./data/WebKB/test -mln -aucJarPath ./ -trees 10 -target faculty -approxCount
+
+-l -train ./data/carcino/train -model ./data/carcino/models -i -test ./data/carcino/test -mln -aucJarPath ./ -trees 10 -target carcino -approxCount
+
+%   AUC ROC   = 0.990900
+%   AUC PR    = 0.361366
+%   CLL	      = -0.134142
+%   Precision = 0.128293 at threshold = 0.500
+%   Recall    = 0.991150
+%   F1        = 0.227181
+Learning time 23.5 s
+Inf time 6.4 s
+
+%   AUC ROC   = 0.980829
+%   AUC PR    = 0.337378
+%   CLL	      = -0.133722
+%   Precision = 0.121607 at threshold = 0.500
+%   Recall    = 0.991042
+%   F1        = 0.216634
+Learning time 13.2 s
+Inf time 5.1 s
+
+%   AUC ROC   = 0.500000
+%   AUC PR    = 0.006761
+%   CLL	      = -0.060616
+%   Precision = NaN at threshold = 0.500
+%   Recall    = 0.000000
+%   F1        = NaN
+Learning Time 7.480 s
+Inf 2.851
+
+Erros 
+UWCSE 9.53%
+IMDB 10%
+
+
+New UWCSE
+%   AUC ROC   = 0.965674
+%   AUC PR    = 0.103367
+%   CLL	      = -1.544342
+%   Precision = 0.040014 at threshold = 0.500
+%   Recall    = 1.000000
+%   F1        = 0.076949
+
+%   AUC ROC   = 0.980343
+%   AUC PR    = 0.185688
+%   CLL	      = -0.167466
+%   Precision = 0.079399 at threshold = 0.500
+%   Recall    = 0.982301
+%   F1        = 0.146923
+
+----------------------------------- IMDB ----------------------------
+Hyper 
+%   AUC ROC   = 0.639798
+%   AUC PR    = 0.530412
+%   CLL	      = -0.861824
+%   Precision = NaN at threshold = 0.500
+%   Recall    = 0.000000
+%   F1        = NaN
+L-time = 3 minutes and 44.951 seconds.
+I-Time = 0.758 seconds.
+
+Original
+%   AUC ROC   = 0.624549
+%   AUC PR    = 0.525583
+%   CLL	      = -0.861002
+%   Precision = NaN at threshold = 0.500
+%   Recall    = 0.000000
+%   F1        = NaN
+Original
+L-time = 6 minutes and 22.112 seconds.
+I-Time = 1.229 seconds.
+
+---------------------------------- Citeseer --------------------------
+Summary construction : 10 mins
+Original
+%   AUC ROC   = 0.999534
+%   AUC PR    = 0.997630
+%   CLL	      = -0.059282
+%   Precision = 0.957311 at threshold = 0.500
+%   Recall    = 0.998134
+%   F1        = 0.977296
+
+% Total inference time (3 trees): 27.418 seconds.
+% Total learning time (3 trees): 11 hours and 48 minutes and 19.894 seconds. = 42499.894 s
+
+FACT
+%   AUC ROC   = 0.500000
+%   AUC PR    = 0.192940
+%   CLL	      = -0.527669
+%   Precision = NaN at threshold = 0.500
+%   Recall    = 0.000000
+%   F1        = NaN
+% Total inference time (3 trees): 11.1 seconds.
+Total learning time (3 trees): 2 hours 56 mins and and 22.15 seconds. = 10582.15
+
+
+
+Hyper
+%   AUC ROC   = 0.998097
+%   AUC PR    = 0.989980
+%   CLL	      = -0.173211
+%   Precision = 0.961913 at threshold = 0.500
+%   Recall    = 0.986141
+%   F1        = 0.973876
+
+% Total inference time (3 trees): 12.519 seconds.
+Total learning time (3 trees): 3 hours and 37.119 seconds. = 10837.119
+----------------------------------- Cora --------------------------------
+MLN - Boost
+% Threshold = 0.8879339681921771
+
+%   AUC ROC   = 0.814208
+%   AUC PR    = 0.967434
+%   CLL	      = -0.582970
+%   Precision = 0.947781 at threshold = 0.500
+%   Recall    = 0.743852
+%   F1        = 0.833525
+
+% Total inference time (20 trees): 15.774 seconds.
+
+------------------------------- Webkb-------------------------------------
+Hyper
+%   AUC ROC   = 1.000000
+%   AUC PR    = 1.000000
+%   CLL	      = -0.049761
+%   Precision = 1.000000 at threshold = 0.500
+%   Recall    = 1.000000
+%   F1        = 1.000000
+
+% Total inference time (10 trees): 757 milliseconds.
+% Total learning time (10 trees): 5.766 seconds.
+
+
+FACT
+
+%   AUC ROC   = 1.000000
+%   AUC PR    = 1.000000
+%   CLL	      = -0.075671
+%   Precision = 1.000000 at threshold = 0.500
+%   Recall    = 1.000000
+%   F1        = 1.000000
+
+% Total inference time (10 trees): 797 milliseconds.
+% Total learning time (10 trees): 5.979 seconds.
+
+
+MLN-Boost
+
+%   AUC ROC   = 1.000000
+%   AUC PR    = 1.000000
+%   CLL	      = -0.075786
+%   Precision = 1.000000 at threshold = 0.500
+%   Recall    = 1.000000
+%   F1        = 1.000000
+
+% Total inference time (10 trees): 896 milliseconds.
+% Total learning time (10 trees): 8.126 second.
+
+
+------------------------ Carcinogenesis --------------------------------
+Hyper
+%   AUC ROC   = 0.527303
+%   AUC PR    = 0.567895
+%   CLL	      = -0.901653
+%   Precision = 0.553846 at threshold = 0.500
+%   Recall    = 0.439024
+%   F1        = 0.489796
+
+% Total inference time (10 trees): 1.8 seconds.
+% Total learning time (10 trees): 1 minutes and 48.479 seconds.
+
+%   AUC ROC   = 0.500000
+%   AUC PR    = 0.550336
+%   CLL	      = -0.703724
+%   Precision = NaN at threshold = 0.500
+%   Recall    = 0.000000
+%   F1        = NaN
+
+% Total inference time (10 trees): 1.5 seconds.
+% Total learning time (10 trees): 1 minutes and 42.5 seconds.
+
+MLN-Boost
+%   AUC ROC   = 0.587027
+%   AUC PR    = 0.572452
+%   CLL	      = -0.811093
+%   Precision = 0.558824 at threshold = 0.500
+%   Recall    = 0.231707
+%   F1        = 0.327586
+
+% Total inference time (10 trees): 2.37 seconds.
+% Total learning time (10 trees): 2 minutes and 33.842 seconds.

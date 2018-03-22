@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Jena-2.12.1"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Commons-collections4"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Jena2.12.1"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/AUC"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Guava"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/HypergraphDB1.3"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
